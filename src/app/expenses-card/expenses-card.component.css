@@ -1,0 +1,32 @@
+.card {
+    background-color: #21242C;
+    margin: 7rem 5rem;
+    width: 15rem;
+    border: 1px solid #3a3a3e;
+    border-radius: 5%;
+    box-shadow: #212128 0rem 0rem 0.3rem;
+    display: flex;
+    text-align: left;
+    padding: 2% 2% 1%;
+    color: #6B6E76;
+}
+
+.card-content {
+    width: 100%;
+}
+
+.card-content caption {
+    color: white;
+}
+
+.card-header {
+    height: 2rem;
+}
+
+.card-body tr{
+    color: whitesmoke;
+}
+
+.card-footer {
+    height: 2rem;
+}

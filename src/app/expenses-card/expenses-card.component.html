@@ -1,1 +1,28 @@
-<p>expenses-card works!</p>
+<div class="card">
+    <table class="card-content">
+        <caption>January</caption>
+    
+        <thead class="card-header">
+            <tr>
+                <th>Expense</th>
+                <th class="al-right">Value</th>
+            </tr>
+        </thead>
+    
+        <tbody class="card-body" *ngFor="let expense of _expenses">
+            <tr>
+                <td>{{ expense.name }}</td>
+                <td class="al-right">{{ expense.value }}</td>
+            </tr>
+        </tbody>
+      
+        <tfoot class="card-footer">
+            <tr>
+                <br>
+                <td>Total</td>
+                <td class="al-right">{{ getSum() }}</td>
+            </tr>
+        </tfoot>
+    
+    </table>
+</div>
