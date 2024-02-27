@@ -7,26 +7,40 @@
     box-shadow: #212128 0rem 0rem 0.3rem;
     display: flex;
     text-align: left;
-    padding: 2% 2% 1%;
-    color: #6B6E76;
+    padding: 1.5% 0.5% 1% 1.5%;
+    color: whitesmoke;
 }
 
 .card-content {
     width: 100%;
 }
 
-.card-content caption {
-    color: white;
-}
 
-.card-header {
+.card-header, .card-footer {
     height: 2rem;
+    color: #6B6E76;
 }
 
-.card-body tr{
-    color: whitesmoke;
+
+.rmv-button {
+    background-color: #21242C;
+    border: hidden ;
+    margin: auto;
 }
 
-.card-footer {
-    height: 2rem;
+.name-column {
+    flex: 1;
+    position: relative;
 }
+
+.value-column {
+    width: 10rem;
+    position: relative;
+}
+
+.remove-column {
+    width: 15rem;
+    position: relative;
+}
+
+

@@ -15,6 +15,13 @@ export class ExpensesCardComponent {
   getSum() {
     let sum: number = 0;
     this._expenses.forEach(a => sum += a.value);
-    return sum;
+    return Math.round((sum + Number.EPSILON) * 100) / 100;
   }
+
+  removeExpense(expenseId: number) {
+    this._expenses = this._expenses.filter(x => x.id !== expenseId);
+    console.log('foi');
+  }
+
+
 }
