@@ -10,16 +10,16 @@ import { NgFor } from '@angular/common';
   styleUrl: './expenses-card.component.css'
 })
 export class ExpensesCardComponent {
-  _expenses = [...expenses];
+  expensesList = [...expenses];
 
   getSum() {
     let sum: number = 0;
-    this._expenses.forEach(a => sum += a.value);
+    this.expensesList.forEach(a => sum += a.value);
     return Math.round((sum + Number.EPSILON) * 100) / 100;
   }
 
   removeExpense(expenseId: number) {
-    this._expenses = this._expenses.filter(x => x.id !== expenseId);
+    this.expensesList = this.expensesList.filter(x => x.id !== expenseId);
     console.log('foi');
   }
 
