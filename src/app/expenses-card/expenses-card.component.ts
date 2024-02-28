@@ -18,6 +18,10 @@ export class ExpensesCardComponent {
     return Math.round((sum + Number.EPSILON) * 100) / 100;
   }
 
+  clearExpenseList() {
+    this.expensesList = [];
+  }
+
   removeExpense(expenseId: number) {
     this.expensesList = this.expensesList.filter(x => x.id !== expenseId);
     console.log('foi');

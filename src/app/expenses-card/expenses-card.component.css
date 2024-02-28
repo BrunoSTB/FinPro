@@ -6,41 +6,52 @@
     border-radius: 5%;
     box-shadow: #212128 0rem 0rem 0.3rem;
     display: flex;
-    text-align: left;
-    padding: 1.5% 0.5% 1% 1.5%;
+    flex-direction: column;
+    padding: 0.5rem;
+    text-align: center;
     color: whitesmoke;
 }
 
-.card-content {
-    width: 100%;
-}
-
-
 .card-header, .card-footer {
-    height: 2rem;
+    padding: 0.3rem;
     color: #6B6E76;
 }
 
+.card-footer {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
 
-.rmv-button {
-    background-color: #21242C;
-    border: hidden ;
-    margin: auto;
+.body-header {
+    font-size: 14px;
+    display: flex;
+    color: #6B6E76;
+
+}
+
+.body-content {
+    display: flex;
+    margin-top: 0.3rem;
 }
 
 .name-column {
-    flex: 1;
-    position: relative;
+    flex: 5;
+    text-align: left;
 }
 
 .value-column {
-    width: 10rem;
-    position: relative;
+    flex: 3;
+    text-align: right;
 }
 
 .remove-column {
-    width: 15rem;
-    position: relative;
+    flex: 1;
+}
+
+.rmv-button {
+    background-color: #21242C;
+    border: none;
 }
 
 

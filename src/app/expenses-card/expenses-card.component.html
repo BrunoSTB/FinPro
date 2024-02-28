@@ -1,28 +1,21 @@
 <div class="card">
-    <table class="card-content">
-        <caption>January</caption>
+    <div class="card-header">January</div>
+
+    <div class="card-body">
+        <div class="body-header">
+            <span class="name-column">Expense</span>
+            <span class="value-column">Value</span>
+            <span class="remove-column"></span>
+        </div>
+        <div class="body-content" *ngFor="let expense of expensesList">
+            <span class="name-column">{{ expense.name }}</span>
+            <span class="value-column">{{ expense.value }}</span>
+            <span class="remove-column"><button class="rmv-button" (click)="removeExpense(expense.id)"><img src="../assets/deletebutton.png"></button></span>
+        </div>
+    </div>
     
-        <thead class="card-header">
-            <tr>
-                <th>Expense</th>
-                <th class="al-right">Value</th>
-            </tr>
-        </thead>
-    
-        <tbody class="card-body" *ngFor="let expense of expensesList">
-            <tr>
-                <td class="name-column">{{ expense.name }}</td>
-                <td class="value-column al-right">{{ expense.value }}</td>
-                <td class="remove-column al-right"><button class="rmv-button" (click)="removeExpense(expense.id)"><img src="../assets/deletebutton.png"></button></td>
-            </tr>
-        </tbody>
-      
-        <tfoot class="card-footer">
-            <tr>
-                <td>Total</td>
-                <td class="al-right">{{ getSum() }}</td>
-            </tr>
-        </tfoot>
-    
-    </table>
+    <div class="card-footer">
+        <span>Total</span>
+        <span>{{ getSum() }}</span>
+    </div>
 </div>
