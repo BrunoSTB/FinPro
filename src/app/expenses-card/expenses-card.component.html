@@ -1,5 +1,9 @@
 <div class="card">
-    <div class="card-header">January</div>
+    <div class="card-header">
+        <button class="card-button"><img src="../assets/add-button-18px.png"></button>
+        <span>January</span>
+        <button class="card-button"><img src="../assets/x-button-18px.png"></button>
+    </div>
 
     <div class="card-body">
         <div class="body-header">
@@ -10,12 +14,18 @@
         <div class="body-content" *ngFor="let expense of expensesList">
             <span class="name-column">{{ expense.name }}</span>
             <span class="value-column">{{ expense.value }}</span>
-            <span class="remove-column"><button class="rmv-button" (click)="removeExpense(expense.id)"><img src="../assets/deletebutton.png"></button></span>
+            <button class="remove-column card-button" (click)="removeExpense(expense.id)"><img src="../assets/deletebutton.png"></button>
         </div>
+        
+        <form class="new-entry">
+            <input type="text" class="name-column">
+            <input type="number" class="value-column">
+            <button class="remove-column card-button"><img src="../assets/add-button-18px.png"></button>
+        </form>
     </div>
     
     <div class="card-footer">
         <span>Total</span>
-        <span>{{ getSum() }}</span>
+        <span class="total-value">{{ getSum() }}</span>
     </div>
 </div>

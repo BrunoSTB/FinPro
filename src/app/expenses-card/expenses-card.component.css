@@ -10,14 +10,12 @@
     padding: 0.5rem;
     text-align: center;
     color: whitesmoke;
+    
 }
 
 .card-header, .card-footer {
     padding: 0.3rem;
     color: #6B6E76;
-}
-
-.card-footer {
     display: flex;
     text-align: center;
     justify-content: space-between;
@@ -27,12 +25,19 @@
     font-size: 14px;
     display: flex;
     color: #6B6E76;
-
 }
 
 .body-content {
     display: flex;
     margin-top: 0.3rem;
+    padding-left: 0.1rem;
+}
+
+.new-entry {
+    display: flex;
+}
+.new-entry input {
+    flex: 2;
 }
 
 .name-column {
@@ -46,13 +51,18 @@
 }
 
 .remove-column {
+    padding-right: 0;
     flex: 1;
 }
 
-.rmv-button {
+.card-button {
     background-color: #21242C;
     border: none;
     cursor: pointer;
+}
+
+.total-value {
+    color: brown;
 }
 
 
