@@ -1,7 +1,7 @@
 .card {
     background-color: #21242C;
-    margin: 7rem 5rem;
     width: 15rem;
+    margin: 1rem;
     border: 1px solid #3a3a3e;
     border-radius: 5%;
     box-shadow: #212128 0rem 0rem 0.3rem;
@@ -31,13 +31,6 @@
     display: flex;
     margin-top: 0.3rem;
     padding-left: 0.1rem;
-}
-
-.new-entry {
-    display: flex;
-}
-.new-entry input {
-    flex: 2;
 }
 
 .name-column {

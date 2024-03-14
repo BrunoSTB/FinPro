@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <button class="card-button"><img src="../assets/add-button-18px.png"></button>
+        <button class="card-button" (click)="toggleForm()"><img src="../assets/add-button-18px.png"></button>
         <span>January</span>
         <button class="card-button"><img src="../assets/x-button-18px.png"></button>
     </div>
@@ -11,17 +11,15 @@
             <span class="value-column">Value</span>
             <span class="remove-column"></span>
         </div>
+
+        <app-expense-form *ngIf="showForm" (formSubmit)="handleFormSubmit($event)" [biggestId]="this.biggestId" [currentDate]="this.currentDate"></app-expense-form>    
+        
         <div class="body-content" *ngFor="let expense of expensesList">
             <span class="name-column">{{ expense.name }}</span>
             <span class="value-column">{{ expense.value }}</span>
             <button class="remove-column card-button" (click)="removeExpense(expense.id)"><img src="../assets/deletebutton.png"></button>
         </div>
         
-        <form class="new-entry">
-            <input type="text" class="name-column">
-            <input type="number" class="value-column">
-            <button class="remove-column card-button"><img src="../assets/add-button-18px.png"></button>
-        </form>
     </div>
     
     <div class="card-footer">

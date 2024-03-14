@@ -1,11 +1,18 @@
-export interface Expense {
+export class Expense {
     id: number;
     date: Date;
     name: string;
     value: number;
+
+    constructor(_id:number, _name: string, _value: number, _date: Date) {
+        this.id = _id;
+        this.name = _name;
+        this.value = _value;
+        this.date = _date;
+    }   
 }
 
-export const expenses = [
+export const expenses: Expense[] = [
     {
         id: 1,
         date: new Date(2024, 2, 4),
