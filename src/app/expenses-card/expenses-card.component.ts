@@ -46,7 +46,9 @@ export class ExpensesCardComponent {
   }
 
   clearExpenseList() {
-    this.expensesList = [];
+    if (confirm("Do you really want to clear all of your expenses?")){
+      this.expensesList = [];
+    }
   }
 
   removeExpense(expenseId: number) {
