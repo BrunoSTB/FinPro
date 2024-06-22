@@ -18,8 +18,23 @@ export class ExpensesCardComponent {
   biggestId = this.getItemWithHighestId(); 
   showForm: boolean = false;
 
+  handleFormSubmit(formData: Expense) {
+    if(formData.name.length > 0)
+    {
+      this.biggestId = formData.id;
+      this.expensesList.push(formData);
+    }
+    this.toggleForm();
+  }
+ 
   toggleForm() {
     this.showForm = !this.showForm;
+  }
+
+  clearExpenseList() {
+    if (confirm("Do you really want to clear all of your expenses?")){
+      this.expensesList = [];
+    }
   }
 
   getItemWithHighestId(): number {
@@ -30,28 +45,13 @@ export class ExpensesCardComponent {
       .reduce((prev, current) => (prev.id > current.id) ? prev : current).id;
   }
 
-  handleFormSubmit(formData: Expense) {
-    if(formData.name.length > 0)
-    {
-      this.biggestId = formData.id;
-      this.expensesList.push(formData);
-    }
-    this.toggleForm();
+  removeExpense(expenseId: number) {
+    this.expensesList = this.expensesList.filter(x => x.id !== expenseId);
   }
 
   getSum() {
     let sum: number = 0;
     this.expensesList.forEach(a => sum += a.value);
     return Math.round((sum + Number.EPSILON) * 100) / 100;
-  }
-
-  clearExpenseList() {
-    if (confirm("Do you really want to clear all of your expenses?")){
-      this.expensesList = [];
-    }
-  }
-
-  removeExpense(expenseId: number) {
-    this.expensesList = this.expensesList.filter(x => x.id !== expenseId);
   }
 }
