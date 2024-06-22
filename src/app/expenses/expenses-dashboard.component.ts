@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { ExpensesCardComponent } from '../expenses-card/expenses-card.component';
 
 @Component({
-  selector: 'app-expenses',
+  selector: 'app-expenses-dashboard',
   standalone: true,
   imports: [ExpensesCardComponent],
-  templateUrl: './expenses.component.html',
-  styleUrl: './expenses.component.css'
+  templateUrl: './expenses-dashboard.component.html',
+  styleUrl: './expenses-dashboard.component.css'
 })
-export class ExpensesComponent {
-
+export class ExpensesDashboardComponent {
+  
 }
