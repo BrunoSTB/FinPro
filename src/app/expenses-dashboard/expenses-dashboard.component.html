@@ -1,4 +1,3 @@
-<div class="card-list">
-    <app-expenses-card></app-expenses-card>
-    <app-expenses-card></app-expenses-card>
+<div class="card-list" *ngFor="let month of monthList">
+    <app-expenses-card [currentDate]="month"></app-expenses-card>
 </div>

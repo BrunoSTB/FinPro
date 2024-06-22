@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Expense, expenses } from '../types/expenses'
 import { NgFor, NgIf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -13,8 +13,8 @@ import { ExpenseFormComponent } from '../expense-form/expense-form.component';
 })
 
 export class ExpensesCardComponent {
+  @Input() currentDate: Date = new Date();
   expensesList = [...expenses];
-  currentDate: Date = new Date(2024, 0, 1);
   biggestId = this.getItemWithHighestId(); 
   showForm: boolean = false;
 
