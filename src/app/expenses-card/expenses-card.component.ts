@@ -14,7 +14,7 @@ import { ExpenseFormComponent } from '../expense-form/expense-form.component';
 
 export class ExpensesCardComponent {
   expensesList = [...expenses];
-  currentDate: Date = new Date(2024, 1, 1);
+  currentDate: Date = new Date(2024, 0, 1);
   biggestId = this.getItemWithHighestId(); 
   showForm: boolean = false;
 
@@ -29,6 +29,10 @@ export class ExpensesCardComponent {
  
   toggleForm() {
     this.showForm = !this.showForm;
+  }
+
+  getCurrentMonth(){
+    return this.currentDate.toLocaleString('default', { month: 'long' });
   }
 
   clearExpenseList() {

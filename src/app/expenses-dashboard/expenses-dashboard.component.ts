@@ -10,4 +10,8 @@ import { ExpensesCardComponent } from '../expenses-card/expenses-card.component'
 })
 export class ExpensesDashboardComponent {
   
+
+  getMonths(){
+    
+  }
 }
