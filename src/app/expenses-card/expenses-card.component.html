@@ -2,7 +2,7 @@
     <div class="card-header">
         <button class="card-button" (click)="toggleForm()"><img src="../assets/add-button-18px.png"></button>
         <span class="month-name">{{getCurrentMonth()}}</span>
-        <button class="card-button" (click)="clearExpenseList()"><img src="../assets/x-button-18px.png"></button>
+        <button class="card-button" (click)="clearExpenseList()"><img src="../assets/deletebutton.png"></button>
     </div>
 
     <div class="card-body">
@@ -22,7 +22,7 @@
             <span class="name-column">{{ expense.name }}</span>
             <span class="value-column">{{ expense.value }}</span>
             <button class="remove-column card-button" (click)="removeExpense(expense.id)">
-                <img src="../assets/deletebutton.png">
+                <img src="../assets/x-button-16px.png">
             </button>
         </div>
         
