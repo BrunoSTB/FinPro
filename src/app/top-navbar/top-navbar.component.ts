@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterOutlet, RouterLinkActive, RouterLink } from '@angular/router'
 
 @Component({
   selector: 'app-top-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterOutlet, RouterLinkActive, RouterLink],
   templateUrl: './top-navbar.component.html',
   styleUrl: './top-navbar.component.css'
 })
 export class TopNavbarComponent {
   links = [
     { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/contact', label: 'Contact' },
+    { path: '/login', label: 'Login' }
   ];
 }
 
