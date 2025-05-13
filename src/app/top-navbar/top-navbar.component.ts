@@ -11,8 +11,10 @@ import { RouterOutlet, RouterLinkActive, RouterLink } from '@angular/router'
 })
 export class TopNavbarComponent {
   links = [
+    { path: '/signup', label: 'Sign Up' },
+    { path: '/login', label: 'Login' },
+    { path: '/expenses', label: 'Expenses' },
     { path: '/', label: 'Home' },
-    { path: '/login', label: 'Login' }
   ];
 }
 

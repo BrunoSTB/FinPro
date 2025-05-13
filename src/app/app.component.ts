@@ -5,6 +5,7 @@ import { ExpensesCardComponent } from './expenses-card/expenses-card.component';
 import { ExpensesDashboardComponent } from './expenses-dashboard/expenses-dashboard.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ import { UserSignupComponent } from './user-signup/user-signup.component';
     ExpensesCardComponent, 
     ExpensesDashboardComponent, 
     UserLoginComponent,
-    UserSignupComponent
+    UserSignupComponent,
+    LandingPageComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
